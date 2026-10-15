@@ -1,0 +1,5 @@
+document.documentElement.classList.add('js');
+const toggle=document.querySelector('.menu-toggle'),links=document.querySelector('.nav-links');
+toggle.addEventListener('click',()=>{const open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'收起导航':'展开导航');});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));
+if('IntersectionObserver' in window){const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');reveal.unobserve(e.target);}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(e=>reveal.observe(e));const navObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)links.querySelectorAll('a').forEach(a=>a.classList.toggle('active',a.hash==='#'+e.target.id));}),{rootMargin:'-15% 0px -55% 0px'});document.querySelectorAll('section[id]').forEach(s=>navObserver.observe(s));}else document.querySelectorAll('.reveal').forEach(e=>e.classList.add('visible'));

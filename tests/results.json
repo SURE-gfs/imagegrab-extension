@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-15",
+  "scope": "真实已加载扩展；内置演示与拦截生成的京东详情夹具，非真实登录商品页面",
+  "results": [
+    {
+      "name": "Manifest V3 扩展实际加载与内置演示页",
+      "result": "PASS"
+    },
+    {
+      "name": "消息传递打开画廊并解码四张图片",
+      "result": "PASS"
+    },
+    {
+      "name": "全选、反选与零选择禁用下载",
+      "result": "PASS"
+    },
+    {
+      "name": "按真实像素尺寸筛选",
+      "result": "PASS"
+    },
+    {
+      "name": "JPG、WebP、PNG 实际转换下载，PNG 文件签名与原尺寸验证",
+      "result": "PASS"
+    },
+    {
+      "name": "画廊刷新后提取记录保留",
+      "result": "PASS"
+    },
+    {
+      "name": "京东详情路径自动注入真实悬浮按钮",
+      "result": "PASS"
+    },
+    {
+      "name": "img、懒加载、srcset、背景图提取，去重和 1×1 过滤",
+      "result": "PASS"
+    },
+    {
+      "name": "非详情路径不显示悬浮按钮",
+      "result": "PASS"
+    },
+    {
+      "name": "插件画廊手机布局无横向溢出",
+      "result": "PASS"
+    }
+  ]
+}

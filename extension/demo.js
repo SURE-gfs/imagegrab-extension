@@ -1,0 +1,1 @@
+document.getElementById('demo-scan').onclick=async()=>{const images=[...document.querySelectorAll('#grid img')].map(x=>({url:x.src,source:'内置演示'}));const result=await chrome.runtime.sendMessage({type:'OPEN_GALLERY',images,pageUrl:location.href,title:'晨光系列 · 内置演示商品图片'});if(!result.ok)document.getElementById('demo-scan').textContent=result.error;};
